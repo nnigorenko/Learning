@@ -24,8 +24,12 @@ def calculate_structure_sum(*args):
             calculate_structure_sum(*args[i].items())
         else:
             calculate_structure_sum(*args[i])
-    return count
+#     return count
+#
+#
+# result = calculate_structure_sum(data_structure)
+# print(result) так по условиям задания, но при использовании global возврат не нужен
 
 
-result = calculate_structure_sum(data_structure)
-print(result)
+calculate_structure_sum(data_structure)
+print(count)
