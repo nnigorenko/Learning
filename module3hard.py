@@ -2,7 +2,7 @@
 # сумму чисел, содержащихся внутри произвольных строк.
 # В итоге получился правильный ответ - 101.В ответе,
 # приведенном в задании, не учтено число 2 в строке 'Urban2'.
-# Для ответа 99 закомментировать строку 37
+# Для ответа 99 закомментировать строку 36
 def numbers_sum_in_string(line):
     numbers_sum = 0
     sample = ''
@@ -12,7 +12,6 @@ def numbers_sum_in_string(line):
         else:
             if sample != '':
                 numbers_sum += int(sample)
-                print(sample, numbers_sum)
             sample = ''
     if sample != '':
         numbers_sum += int(sample)
