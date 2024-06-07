@@ -4,7 +4,7 @@ from time import sleep
 class User:
     def __init__(self, nickname, password, age):
         self.nickname = nickname
-        self.password = password
+        self.password = hash(password)
         self.age = age
 
 
@@ -21,14 +21,33 @@ class UrTube:
     videos = []
 
     def __init__(self, users, videos, current_user):
-        self.users = []
+        self.users = (User)
+        self.videos = [Video]
+        self.current_user = current_user
 
-    pass
+    def log_in(self, login, password):
+        for i in range(len(self.users)):
+            if login in self.users[i]:
+                if hash(password) in self.users[i]:
+                    self.current_user = login
+                    print(f'Wellcome back, {login}!')
+                    break
+                else:
+                    print('Incorrect password')
+                    break
+            else:
+                continue
+        print(f'User {login} not found')
 
 
-for i in range(1, 11):
-    sleep(1)
-    print(i, end=' ')
+
+
+
+
+
+# for i in range(1, 11):
+#     sleep(1)
+#     print(i, end=' ')
 
 # ur = UrTube()
 # v1 = Video('Лучший язык программирования 2024 года', 200)
