@@ -12,7 +12,7 @@ print('There are %s players in the %s team!' %(team1_num, team1_name))
 print('We have totally %s players challenging - %s in one team and %s in another!' %(team1_num + team2_num, team1_num, team2_num))
 # Использование format():
 print('The {0} team solved {1} tasks!'.format(team2_name, score_2))
-print('{0} spent just {1} seconds to solve all the tasks!'.format(team2_name, team2_time))
+print('{0} spent just {1:.2f} seconds to solve all the tasks!'.format(team2_name, team2_time))
 # Использование f-строк:
 print(f'There were {score_1} and {score_2} tasks solved by teams!')
 if score_1 > score_2 or score_1 == score_2 and team1_time < team2_time:
